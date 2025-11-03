@@ -1,13 +1,14 @@
-from sqlalchemy import Column, Integer, String, DateTime, func
-from ..database import Base
+# backend/app/models/search_history.py
 
-class SearchHistory(Base):
-    """
-    SearchHistory model to store a log of searched GitHub usernames.
-    This will be used to show recent searches on the frontend.
-    """
-    __tablename__ = "search_history"
+from pydantic import BaseModel
+from datetime import datetime
 
-    id = Column(Integer, primary_key=True, index=True)
-    username = Column(String(255), index=True, nullable=False)
-    searched_at = Column(DateTime(timezone=True), server_default=func.now())
+class SearchHistory(BaseModel):
+    """
+    SearchHistory model to represent a log of searched GitHub usernames.
+    Used to show recent searches on the frontend.
+    """
+
+    id: int
+    username: str
+    searched_at: datetime
