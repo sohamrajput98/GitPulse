@@ -3,7 +3,7 @@ import { Toaster } from 'react-hot-toast';
 import Home from '@/pages/Home';
 import Comparison from '@/pages/Comparison';
 import { Users, GitCompare, Github } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from "@/utils/utils";
 
 function App() {
   const location = useLocation();
@@ -55,6 +55,7 @@ function App() {
       {/* Main Content Area */}
       <main className="container max-w-screen-2xl mx-auto p-4 md:p-8">
         <Routes>
+          <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/comparison" element={<Comparison />} />
         </Routes>
