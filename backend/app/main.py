@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .database import Base, engine
+
 from .api import search_endpoints, badge_endpoints, user_endpoints, repo_endpoints
 
 # This command will create all the database tables based on the models
 # when the application starts up.
-Base.metadata.create_all(bind=engine)
+
 
 # Initialize the FastAPI app instance
 app = FastAPI(
