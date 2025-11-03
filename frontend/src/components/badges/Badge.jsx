@@ -1,6 +1,6 @@
 import React from 'react';
 import HoverTooltip from '@/components/fun/HoverTooltip';
-import { cn } from '@/lib/utils';
+import { cn } from "@/utils/utils";
 
 const tierStyles = {
   Bronze: 'border-yellow-700/80 hover:border-yellow-600/80',
