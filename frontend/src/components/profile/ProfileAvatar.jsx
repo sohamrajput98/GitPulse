@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from "@/utils/utils";
 
 /**
  * Renders a user's avatar with a consistent style.
